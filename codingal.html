@@ -2,23 +2,33 @@
 <html>
   <head>
     <title>
-      Introduction to Javascript
+      Operators
     </title>
   </head>
   <body>
     
-<h1 id="result"></h1>
-
-<p id="codingal"></p>
+<h1 id="add"></h1>
+<h1 id="sub"></h1>
+<h1 id="multi"></h1>
+<h1 id="div"></h1>
 
 <script>
 
-// variables are used to store something
-var codingal = "Welcome to Codingal"
+var x = 20
+var y = 5
+var text = "The calculated result is :"
 
-   document.getElementById("result").innerHTML = codingal
-   document.getElementById("codingal").innerHTML ="We are learning Javascript"
+ var addition = x + y
+document.getElementById("add").innerHTML = text + addition
 
+var substract = x - y
+document.getElementById("sub").innerHTML = text + substract
+
+var multiply = x * y
+document.getElementById("multi").innerHTML = text + multiply
+
+var divide = x / y
+document.getElementById("div").innerHTML = text + divide
 
 </script>
 
