@@ -2,35 +2,46 @@
 <html>
   <head>
     <title>
-      Operators
+      Simple Calculator Project
     </title>
   </head>
   <body>
     
-<h1 id="add"></h1>
-<h1 id="sub"></h1>
-<h1 id="multi"></h1>
-<h1 id="div"></h1>
+    <h1>Simple Calculator Results</h1>
 
-<script>
+    <h2 id="addition-result"></h2>
+    <h2 id="subtraction-result"></h2>
+    <h2 id="multiplication-result"></h2>
+    <h2 id="division-result"></h2>
 
-var x = 20
-var y = 5
-var text = "The calculated result is :"
+    <script>
 
- var addition = x + y
-document.getElementById("add").innerHTML = text + addition
+      // 1. Variables are used to store the two numbers (operands)
+      var num1 = 50;
+      var num2 = 10;
+      
+      // A common text string for clean output
+      var outputText = "The result of the operation is: ";
 
-var substract = x - y
-document.getElementById("sub").innerHTML = text + substract
+      // 2. Arithmetic Operators are used for calculations
 
-var multiply = x * y
-document.getElementById("multi").innerHTML = text + multiply
+      // Addition
+      var addition = num1 + num2;
+      document.getElementById("addition-result").innerHTML = "Addition (" + num1 + " + " + num2 + "): " + addition;
 
-var divide = x / y
-document.getElementById("div").innerHTML = text + divide
+      // Subtraction
+      var subtraction = num1 - num2;
+      document.getElementById("subtraction-result").innerHTML = "Subtraction (" + num1 + " - " + num2 + "): " + subtraction;
 
-</script>
+      // Multiplication
+      var multiplication = num1 * num2;
+      document.getElementById("multiplication-result").innerHTML = "Multiplication (" + num1 + " * " + num2 + "): " + multiplication;
+
+      // Division
+      var division = num1 / num2;
+      document.getElementById("division-result").innerHTML = "Division (" + num1 + " / " + num2 + "): " + division;
+
+    </script>
 
   </body>
 </html>
