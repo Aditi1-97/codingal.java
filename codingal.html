@@ -7,22 +7,39 @@
 
 <body>
 
+  <button onclick="calculate(20 , 5)">Calculate</button>
+  <button onclick="calculation(36, 5)">calculate</button>
+
 <h1 id="result"></h1>
+<h1 id="result2"></h1>
+<h1 id="result3"></h1>
 
 
 <script>
 
-function codingal(x , y){
-
-  var result = x * y
-  document.getElementById("result").innerHTML = "The calculation result is :" + result
+function codingal(){
+  document.getElementById("result").innerHTML = "Welcome to Codingal"
 }
 
-codingal(32,40)
+codingal()
 
+function calculate(num1, num2){
+  var result = num1 / num2
+ document.getElementById("result2").innerHTML = "The division result is :" + result
+}
 
+function calculation(num3, num4){
+  var result = num3 * num4
+document.getElementById("result3").innerHTML = "The multiplication result is :" + result
+}
 
+function add(x, y){
+ return x + y
+}
+ 
+var addition = add(10,20)
 
+console.log("The addition result is :" , addition)
 </script>
 
 
