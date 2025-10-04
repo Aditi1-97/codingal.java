@@ -1,43 +1,53 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Multiplication using Functions</title>
+  </head>
+  <body>
 
-<head>
-  <title>Functions</title>
-</head>
+    
+    <button onclick="calculation(62, 7)">Calculate</button>
+    <button onclick="calculate(99 , 999)">Calculatee</button>
+    <button onclick="calc(56, 87)">Calc</button>
+    <h1 id="result"></h1>
+    <h1 id="result1"></h1>
+    <h1 id="result2"></h1>
+    <h1 id="result3"></h1>
 
-<body>
+    <script>
 
-  <button onclick="calculate(20 , 5)">Calculate</button>
-  <button onclick="calculation(36, 5)">calculate</button>
+     function codingal(){
+      document.getElementById("result").innerHTML = "Multiplication using Functions"
+     }
 
-<h1 id="result"></h1>
-<h1 id="result2"></h1>
-<h1 id="result3"></h1>
-
-
-<script>
-
-function codingal(){
-  document.getElementById("result").innerHTML = "Welcome to Codingal"
-}
-
-codingal()
-
-function calculate(num1, num2){
-  var result = num1 / num2
- document.getElementById("result2").innerHTML = "The division result is :" + result
-}
-
-function calculation(num3, num4){
-  var result = num3 * num4
-document.getElementById("result3").innerHTML = "The multiplication result is :" + result
-}
+     codingal()
 
 
-</script>
+    //first multiplication//
+    function calculation(num1, num2){
+     var result= num1*num2
+     document.getElementById("result1").innerHTML = "The first multiplication result is :" + result
+    }
 
+    //second multiplication//
+    function calculate(num3, num4){
+      var result= num3 * num4
+      document.getElementById("result2").innerHTML = "The second multiplication result is:" + result
+    }
 
+    //third multiplication//
+    function calc(num5, num6){
+     var result = num5*num6
+     document.getElementById("result3").innerHTML = "The third multiplication result is :" + result
+    }
 
-</body>
+    function multiplication (x,y){
+    return x * y
+    }
 
+    var multiply = mutiply(20, 10)
+    console.log("The multiplication result is:" , multiplication)
+
+    </script>
+  </body>
 </html>
