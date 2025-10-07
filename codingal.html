@@ -1,41 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>For Loop</title>
+    <title>Methods</title>
   </head>
   <body>
 
 
     <script>
-     let num1  = 30
-     let num2 = 5
-     let operator = "*"
+    
+   var text = "aDIti"
 
-    switch( operator) {
-      case "+":
-       console.log(`${num1} + ${num2} = ${num1 + num2}` );
-       break;
+   var capital = text.toUpperCase()
+   document.write(capital)
+   document.write("<br>")
 
-        case "-":
-       console.log(`${num1} - ${num2} = ${num1 - num2}` );
-       break;
+   var smaller = text.toLowerCase()
+   document.write(smaller)
+   document.write("<br>")
 
-        case "*":
-       console.log(`${num1} * ${num2} = ${num1 * num2}` );
-       break;
-
-        case "/":
-       console.log(`${num1} / ${num2} = ${num1 / num2}` );
-       break;
-
-        case "%":
-       console.log(`${num1} % ${num2} = ${num1 % num2}` );
-       break;
-
-       default:
-        console.log("Invalid Operator!");
-    }
-
+   var letter = text.startsWith("t")
+   document.write(letter)
 
     </script>
   </body>
