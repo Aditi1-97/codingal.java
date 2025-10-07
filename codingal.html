@@ -5,17 +5,38 @@
   </head>
   <body>
 
-  
-    
+
     <script>
+     let num1  = 30
+     let num2 = 5
+     let operator = "*"
 
-    var fruits = ["Apple", "Banana", "Mango", "Orange", "Lemon"]
+    switch( operator) {
+      case "+":
+       console.log(`${num1} + ${num2} = ${num1 + num2}` );
+       break;
 
-    for (i = 0; i < fruits.length; i++) {
-      var text= "We love to eat " + fruits[i] + "<br>"
-      document.write(text)
+        case "-":
+       console.log(`${num1} - ${num2} = ${num1 - num2}` );
+       break;
+
+        case "*":
+       console.log(`${num1} * ${num2} = ${num1 * num2}` );
+       break;
+
+        case "/":
+       console.log(`${num1} / ${num2} = ${num1 / num2}` );
+       break;
+
+        case "%":
+       console.log(`${num1} % ${num2} = ${num1 % num2}` );
+       break;
+
+       default:
+        console.log("Invalid Operator!");
     }
-    
+
+
     </script>
   </body>
 </html>
