@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Methods</title>
-  </head>
-  <body>
+<head>
+    <title>Methods and Loops </title>
+</head>
+<body>
 
+    <h1>Methods and Loops Activity Output</h1>
+    <p>This code demonstrates the use of Loops and built-in Methods.</p>
+    
+    <div id="output"></div>
 
     <script>
+        
+        const outputDiv = document.getElementById('output');
+
+        let loopHtml = "<h2>1. Random Set of Numbers (Using 'for' Loop)</h2>";
+        loopHtml += "<p>A loop runs 6 times to generate and print random numbers:</p>";
+        
     
-   var text = "aDIti"
+        for (let i = 1; i <= 6; i++) {
+            const randomValue = Math.floor(Math.random() * 100); 
+            loopHtml += `Number ${i}: <strong>${randomValue}</strong><br>`;
+        }
+        outputDiv.innerHTML += loopHtml;
 
-   var capital = text.toUpperCase()
-   document.write(capital)
-   document.write("<br>")
+        
+        const today = new Date(); 
+        let dateHtml = "<h2>2. Current Date (Using Date Method)</h2>";
+        dateHtml += `<p>Current Date: <strong>${today.toDateString()}</strong></p>`;
 
-   var smaller = text.toLowerCase()
-   document.write(smaller)
-   document.write("<br>")
+        
+        const dateString = today.toDateString();
+        dateHtml += `<p>Date in uppercase (demonstrating **toUpperCase** from Code 1): <strong>${dateString.toUpperCase()}</strong></p>`;
+        outputDiv.innerHTML += dateHtml;
 
-   var letter = text.startsWith("t")
-   document.write(letter)
+        let mathHtml = "<h2>3. Rounded Random Number (Using Math Methods)</h2>";
+        
+      
+        const rawNumber = Math.random() * 50; 
+        
+      
+        const roundedNumber = Math.round(rawNumber); 
+
+        mathHtml += `<p>Raw Number: ${rawNumber.toFixed(2)}</p>`;
+        mathHtml += `<p>Rounded Number: <strong>${roundedNumber}</strong></p>`;
+        outputDiv.innerHTML += mathHtml;
+        
+       
 
     </script>
-  </body>
+</body>
 </html>
