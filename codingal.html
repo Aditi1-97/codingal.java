@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Maths Operation</title>
+        <title>Objects</title>
 
     </head>
 
     <body>
-        
+          <h1 id="result"></h1>
+
+
         <script>
 
-        var round = Math.round(3.6)
-        console.log(round)
+       var student = {
+        name:"Elon Musk",
+        class: 9,
+        brand:"Twitter",
+        subjects: [ {fruitName: "Mango", prices:[23,44,15] }, "English", "Maths"]
+       }
 
-        var ceil = Math.ceil(2.1)
-        console.log(ceil)
+       document.getElementById("result").innerHTML = student.subjects[0].prices[1]
 
-        var floor = Math.floor(2.1)
-        console.log(floor)
+       student.brand = "Tesla"
 
-        var square = Math.sqrt(144)
-        console.log(square)
+       console.log(student)
 
-        var power = Math.pow(3, 5)
-        console.log(power)
-        
+       var keys = Object.keys(student)
+
+       for (i =0; i< keys.length; i++){
+        var studentKeys = keys[i] + " "
+        document.write(studentKeys)
+       }
+
+       console.log(Object.values(student))
+       console.log(Object.entries(student))
+       console.log(student.hasOwnProperty("brand"))
+
         </script>
     </body>
 </html>
