@@ -1,53 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Methods and Loops </title>
-</head>
-<body>
+    <head>
+        <title>Objects</title>
 
-    <h1>Methods and Loops Activity Output</h1>
-    <p>This code demonstrates the use of Loops and built-in Methods.</p>
-    
-    <div id="output"></div>
+    </head>
 
-    <script>
-        
-        const outputDiv = document.getElementById('output');
+    <body>
+          <h1 id="result"></h1>
 
-        let loopHtml = "<h2>1. Random Set of Numbers (Using 'for' Loop)</h2>";
-        loopHtml += "<p>A loop runs 6 times to generate and print random numbers:</p>";
-        
-    
-        for (let i = 1; i <= 6; i++) {
-            const randomValue = Math.floor(Math.random() * 100); 
-            loopHtml += `Number ${i}: <strong>${randomValue}</strong><br>`;
-        }
-        outputDiv.innerHTML += loopHtml;
 
-        
-        const today = new Date(); 
-        let dateHtml = "<h2>2. Current Date (Using Date Method)</h2>";
-        dateHtml += `<p>Current Date: <strong>${today.toDateString()}</strong></p>`;
+        <script>
 
-        
-        const dateString = today.toDateString();
-        dateHtml += `<p>Date in uppercase (demonstrating **toUpperCase** from Code 1): <strong>${dateString.toUpperCase()}</strong></p>`;
-        outputDiv.innerHTML += dateHtml;
+       var student = {
+        name:"Elon Musk",
+        class: 9,
+        brand:"Twitter",
+        subjects: [ {fruitName: "Mango", prices:[23,44,15] }, "English", "Maths"]
+       }
 
-        let mathHtml = "<h2>3. Rounded Random Number (Using Math Methods)</h2>";
-        
-      
-        const rawNumber = Math.random() * 50; 
-        
-      
-        const roundedNumber = Math.round(rawNumber); 
+       document.getElementById("result").innerHTML = student.subjects[0].prices[1]
 
-        mathHtml += `<p>Raw Number: ${rawNumber.toFixed(2)}</p>`;
-        mathHtml += `<p>Rounded Number: <strong>${roundedNumber}</strong></p>`;
-        outputDiv.innerHTML += mathHtml;
-        
-       
+       student.brand = "Tesla"
 
-    </script>
-</body>
+       console.log(student)
+
+       var keys = Object.keys(student)
+
+       for (i =0; i< keys.length; i++){
+        var studentKeys = keys[i] + " "
+        document.write(studentKeys)
+       }
+
+       console.log(Object.values(student))
+       console.log(Object.entries(student))
+       console.log(student.hasOwnProperty("brand"))
+
+        </script>
+    </body>
 </html>
