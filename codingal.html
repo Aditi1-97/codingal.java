@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Objects</title>
+<head>
+    <title>Sum of Arguments</title>
+</head>
+<body>
+    <h1>Sum of Arguments</h1>
+    <p id="sumResult"></p>
+    <p id="trigValues"></p>
+    <p id="objectOutput"></p>
 
-    </head>
+    <script>
+        // Function to calculate the sum of any number of arguments
+        function sumOfArguments(...args) {
+            let total = 0;
+            for (let i = 0; i < args.length; i++) {
+                total += args[i];
+            }
+            return total;
+        }
 
-    <body>
-          <h1 id="result"></h1>
+        // Example usage
+        var sum = sumOfArguments(30, 45, 60);
+        document.getElementById("sumResult").innerHTML = 
+            "Sum of arguments: " + sum;
 
+        // Trigonometric calculations using Math object
+        var radians = sum * (Math.PI / 180); // Convert degrees to radians
+        var sinValue = Math.sin(radians).toFixed(3);
+        var cosValue = Math.cos(radians).toFixed(3);
+        var tanValue = Math.tan(radians).toFixed(3);
 
-        <script>
+        document.getElementById("trigValues").innerHTML = 
+            `Trigonometric Values for ${sum}°:<br>
+            sin = ${sinValue}, cos = ${cosValue}, tan = ${tanValue}`;
 
-       var student = {
-        name:"Elon Musk",
-        class: 9,
-        brand:"Twitter",
-        subjects: [ {fruitName: "Mango", prices:[23,44,15] }, "English", "Maths"]
-       }
+        // Object example – student doing this project
+        var student = {
+            name: "Elon Musk",
+            class: 9,
+            project: "Sum of Arguments",
+            results: {
+                sum: sum,
+                sine: sinValue,
+                cosine: cosValue,
+                tangent: tanValue
+            }
+        };
 
-       document.getElementById("result").innerHTML = student.subjects[0].prices[1]
+        // Display object keys
+        var keys = Object.keys(student);
+        var output = "<b>Student Object Keys:</b><br>";
+        for (let i = 0; i < keys.length; i++) {
+            output += keys[i] + "<br>";
+        }
 
-       student.brand = "Tesla"
+        document.getElementById("objectOutput").innerHTML = output;
 
-       console.log(student)
-
-       var keys = Object.keys(student)
-
-       for (i =0; i< keys.length; i++){
-        var studentKeys = keys[i] + " "
-        document.write(studentKeys)
-       }
-
-       console.log(Object.values(student))
-       console.log(Object.entries(student))
-       console.log(student.hasOwnProperty("brand"))
-
-        </script>
-    </body>
+        // Console details
+        console.log(student);
+        console.log(Object.values(student));
+        console.log(Object.entries(student));
+        console.log(student.hasOwnProperty("project"));
+    </script>
+</body>
 </html>
+
+
