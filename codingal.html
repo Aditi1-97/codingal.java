@@ -1,68 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Sum of Arguments</title>
-</head>
-<body>
-    <h1>Sum of Arguments</h1>
-    <p id="sumResult"></p>
-    <p id="trigValues"></p>
-    <p id="objectOutput"></p>
+    <head>
+        <title>Arrays in Javascript</title>
 
-    <script>
-        // Function to calculate the sum of any number of arguments
-        function sumOfArguments(...args) {
-            let total = 0;
-            for (let i = 0; i < args.length; i++) {
-                total += args[i];
-            }
-            return total;
-        }
+    </head>
 
-        // Example usage
-        var sum = sumOfArguments(30, 45, 60);
-        document.getElementById("sumResult").innerHTML = 
-            "Sum of arguments: " + sum;
 
-        // Trigonometric calculations using Math object
-        var radians = sum * (Math.PI / 180); // Convert degrees to radians
-        var sinValue = Math.sin(radians).toFixed(3);
-        var cosValue = Math.cos(radians).toFixed(3);
-        var tanValue = Math.tan(radians).toFixed(3);
+    <body>
 
-        document.getElementById("trigValues").innerHTML = 
-            `Trigonometric Values for ${sum}°:<br>
-            sin = ${sinValue}, cos = ${cosValue}, tan = ${tanValue}`;
+        <h1 id="result1"></h1>
+        <h1 id="result2"></h1>
+        <h1 id="result3"></h1>
+        <h1 id="result4"></h1>
+        <h1 id="result5"></h1>
+        <h1 id="result6"></h1>
+        <h1 id="result7"></h1>
 
-        // Object example – student doing this project
-        var student = {
-            name: "Elon Musk",
-            class: 9,
-            project: "Sum of Arguments",
-            results: {
-                sum: sum,
-                sine: sinValue,
-                cosine: cosValue,
-                tangent: tanValue
-            }
-        };
+        <script>
 
-        // Display object keys
-        var keys = Object.keys(student);
-        var output = "<b>Student Object Keys:</b><br>";
-        for (let i = 0; i < keys.length; i++) {
-            output += keys[i] + "<br>";
-        }
+        var fruits = ["Apple", "Banana","Mango", "Orange", "Grapes"]
+         
+       var foods = ["Rice", "Bread", "Eggs"] 
 
-        document.getElementById("objectOutput").innerHTML = output;
+       document.getElementById("result1").innerHTML = fruits
 
-        // Console details
-        console.log(student);
-        console.log(Object.values(student));
-        console.log(Object.entries(student));
-        console.log(student.hasOwnProperty("project"));
-    </script>
-</body>
+       fruits.pop()
+       document.getElementById("result2").innerHTML = fruits
+
+       fruits.push("Lemon")
+        document.getElementById("result3").innerHTML = fruits
+
+      fruits.shift()
+      document.getElementById("result4").innerHTML = fruits
+
+      fruits.unshift("Coconut")
+      document.getElementById("result5").innerHTML = fruits
+
+      fruits.splice(1, 2, "Kiwi", "Pineapple")
+      document.getElementById("result6").innerHTML = fruits
+
+      var merged = fruits.concat(foods)
+      document.getElementById("result7").innerHTML = merged
+
+       for(i=0; i < merged.length; i++){
+        var text = "I love to eat "+ merged[i]+ "<br>"
+         document.write(text)
+       }
+
+
+        </script>
+    </body>
 </html>
 
 
