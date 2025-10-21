@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Accessing Values with HTML DOM</title>
+</head>
 
-    <head>
+<body>
 
-        <title>JS an external file</title>
-       
-    </head>
+  <h2>Accessing values with HTML DOM Structure</h2>
+  <h3>Output:</h3>
 
-    <body>
-     
-       <script src="script.js">
-       
-        
+  <h4 id="result1"></h4>
+  <h4 id="result2"></h4>
+  <h4 id="result3"></h4>
+  <h4 id="result4"></h4>
+  <h4 id="result5"></h4>
+  <h4 id="result6"></h4>
 
-       </script>
+  <button onclick="showMessage()">Click me</button>
 
-        
+  <script>
+    
+    var student = {
+      name: "Luna",
+      age: 12,
+      subjects: ["Math", "Science", "English"]
+    };
 
-    </body>
+    
+    document.getElementById("result1").innerHTML = 
+      "Name: " + student.name + "<br> Age: " + student.age;
 
+    
+    document.getElementById("result2").innerHTML = 
+      "Subjects: " + student.subjects.join(", ");
+
+    
+    document.getElementById("result3").innerHTML = 
+      "Favorite subject: " + student.subjects[1];
+
+    
+    student.subjects.pop();
+    document.getElementById("result4").innerHTML = 
+      "After pop(): " + student.subjects.join(", ");
+
+    
+    student.subjects.push("Computer");
+    document.getElementById("result5").innerHTML = 
+      "After push(): " + student.subjects.join(", ");
+
+    
+    var hobbies = ["Coding", "Drawing"];
+    var merged = student.subjects.concat(hobbies);
+    document.getElementById("result6").innerHTML = 
+      "Merged array (subjects + hobbies): " + merged.join(", ");
+
+    
+    function showMessage(){
+      alert("Hello! You are accessing values with HTML DOM!");
+    }
+  </script>
+
+</body>
 </html>
