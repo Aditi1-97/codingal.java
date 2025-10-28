@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Print Random Numbers</title>
-</head>
+    <head>
+        <title>Class in Javascript</title>
+    </head>
 
-<body>
+    <body>
+        
+        <button onclick="RailwaySubmission()">Submit Railway</button>
+        <button onclick=" RailwayCancellation()">Cancel Railway</button>
 
-  <script>
-    
-    
-    var count = 6
+        <script>
+          
+          class Railway{
 
-    var target = 28
+            submission(name, ticket){
+                alert("Form has been submitted by"+ name + "and the ticket number is "+ ticket)
+            }
+            
+            cancellation(name, ticket){
+                alert("Form has been cancelled by"+ name + "and the ticket number is "+ ticket)
+            }
+          }
 
-     let message = "Printing numbers"
-     console.log(message)
-    
-    while(count <= target){
-      console.log("Count: " + count)
-      count++
-    }
+          class flight extends Railway{
+             fly(name, ticket){
+                alert("Flight has been booked by"+ name + "ticket number is"+ ticket)
+             }
 
-  </script>
+          }
 
-</body>
+          var alex = new Railway
+
+          function RailwaySubmission(){
+            alex.submission("Alex","C22")
+            harry.submission("Harry","A9")
+          }
+
+          function RailwayCancellation(){
+            alex.cancellation("Alex","B12")
+
+          }
+
+          var harry = new flight
+
+        </script>
+    </body>
 </html>
+
