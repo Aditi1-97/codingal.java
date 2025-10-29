@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Class in Javascript</title>
-    </head>
+  <head>
+    <title>Class in JavaScript</title>
+  </head>
 
-    <body>
-        
-        <button onclick="RailwaySubmission()">Submit Railway</button>
-        <button onclick=" RailwayCancellation()">Cancel Railway</button>
+  <body>
+    
+    <button onclick="bookTrain()">Book Train Ticket</button>
+    <button onclick="cancelTrain()">Cancel Train Ticket</button>
+    <button onclick="bookFlight()">Book Flight Ticket</button>
 
-        <script>
-          
-          class Railway{
+    <script>
+      
+      class Railway {
+        submission(name, ticket) {
+          alert("✅ Railway ticket booked by" + name + "Ticket No:" + ticket);
+          console.log(`Railway: Ticket booked by ${name}, Ticket No: ${ticket}`);
+        }
 
-            submission(name, ticket){
-                alert("Form has been submitted by"+ name + "and the ticket number is "+ ticket)
-            }
-            
-            cancellation(name, ticket){
-                alert("Form has been cancelled by"+ name + "and the ticket number is "+ ticket)
-            }
-          }
+        cancellation(name, ticket) {
+          alert("❌ Railway ticket cancelled by" + name +" Ticket No:" + ticket);
+          console.log(`Railway: Ticket cancelled by ${name}, Ticket No: ${ticket}`);
+        }
 
-          class flight extends Railway{
-             fly(name, ticket){
-                alert("Flight has been booked by"+ name + "ticket number is"+ ticket)
-             }
+      
+        static info() {
+          alert(" This system handles Railway and Flight bookings.");
+          console.log("System Info: Handling Railway and Flight bookings.");
+        }
+      }
 
-          }
+      
+      class Flight extends Railway {
+        fly(name, ticket) {
+          alert("✈️ Flight booked by"+ name + "Ticket No:" + ticket);
+          console.log("Flight: Ticket booked by" + name + "Ticket No:" + ticket);
+        }
+      }
 
-          var alex = new Railway
+      
+      const henry = new Railway();
+      const owen = new Flight();
 
-          function RailwaySubmission(){
-            alex.submission("Alex","C22")
-            harry.submission("Harry","A9")
-          }
+      
+      function bookTrain() {
+        Railway.info()
+        henry.submission("Henry", "C22");
+      }
 
-          function RailwayCancellation(){
-            alex.cancellation("Alex","B12")
+      function cancelTrain() {
+        henry.cancellation("Henry", "B12");
+      }
 
-          }
-
-          var harry = new flight
-
-        </script>
-    </body>
+      function bookFlight() {
+        Railway.info(); 
+      owen.fly("Owen", "F45");
+      }
+    </script>
+  </body>
 </html>
-
