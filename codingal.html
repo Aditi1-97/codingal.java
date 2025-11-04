@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Evaluate</title>
+    <title>Map and Arrange an Array</title>
   </head>
 
   <body>
+    <h1>Map and Arrange an Array</h1>
+    <p>Array sorting and mapping in JavaScript</p>
 
-   <p>Click the button to execute/evaluate Javascript code/expressions.</p>
-    <button onclick="myFunction()">Try It</button>
-    
-    <p id="result"></p>
+    <h2>1️⃣ Sorting Fruits</h2>
+    <button onclick="sorting()">Sort</button>
+    <button onclick="reversed()">Reverse</button>
+    <h3 id="fruitResult"></h3>
+
+    <h2>2️⃣ Sorting Numbers</h2>
+    <button onclick="Ascending()">Ascending</button>
+    <button onclick="Descending()">Descending</button>
+    <h3 id="numberResult"></h3>
+
+    <h2>3️⃣ Evaluate Expression</h2>
+    <button onclick="myFunction()">Evaluate</button>
+    <h3 id="evalResult"></h3>
 
     <script>
-       
-       function myFunction(){
+      
+      var fruits = ["Apple", "Mango", "Banana", "Grapes", "Dragon Fruit"];
 
-       var x = 20
-       var y = 30
+      function sorting() {
+        var sorted = fruits.sort();
+        document.getElementById("fruitResult").innerHTML = "Sorted: " + sorted;
+      }
 
-       var c = eval('x*y+20-10/x+y')
-      document.getElementById("result").innerHTML = c
+      function reversed() {
+        var reversed = fruits.reverse();
+        document.getElementById("fruitResult").innerHTML = "Reversed: " + reversed;
+      }
 
-       }
+      
+      var marks = [29, 2, 65, 125, 89];
 
+      function Ascending() {
+        marks.sort(function (a, b) {
+          return a - b;
+        });
+        document.getElementById("numberResult").innerHTML = "Ascending: " + marks;
+          
+      }
+
+      function Descending() {
+        marks.sort(function (a, b) {
+          return b - a;
+        });
+        document.getElementById("numberResult").innerHTML = "Descending: " + marks;
+        
+      }
+
+      
+      function myFunction() {
+        var x = 90;
+        var y = 120;
+        var c = eval('x/y*20-80/x + y');
+        document.getElementById("evalResult").innerHTML =  "Evaluated Result: " + c;
+          
+      }
     </script>
   </body>
 </html>
+
+    
 
