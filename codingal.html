@@ -1,29 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>Number Sorting</title>
   </head>
 
   <body>
 
-    <button onclick="sorting()">Sort</button>
-    <button onclick="reversed()">Reverse</button>
-
+    <button onclick="Ascending()">Ascend</button>
+    <button onclick="Descending()">Descend</button>
+    
+    
     <h1 id="result"></h1>
 
     <script>
        
-     var fruits = ["Apple", "Mango", "Banana", "Grapes" , "Orange"]
+     var marks = [21,103,82,45,88]
 
-     function sorting(){
-      var sorted = fruits.sort()
-      document.getElementById("result").innerHTML = sorted
+     function Ascending(){
+      marks.sort(function (a, b){
+      return a-b
+
+      })
+    
+     document.getElementById("result").innerHTML = marks
+    
      }
 
-     function reversed(){
-      var reversed = fruits.reverse()
-      document.getElementById("result").innerHTML = reversed
+      function Descending(){
+      marks.sort(function (a, b){
+      return b-a
+
+      })
+    
+     document.getElementById("result").innerHTML = marks
+    
      }
+
+     function codingal(a,b){
+      return a+b
+     }
+      console.log(codingal(20,30))
+    
 
     </script>
   </body>
