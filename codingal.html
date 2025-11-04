@@ -1,46 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Number Sorting</title>
+    <title>Evaluate</title>
   </head>
 
   <body>
 
-    <button onclick="Ascending()">Ascend</button>
-    <button onclick="Descending()">Descend</button>
+   <p>Click the button to execute/evaluate Javascript code/expressions.</p>
+    <button onclick="myFunction()">Try It</button>
     
-    
-    <h1 id="result"></h1>
+    <p id="result"></p>
 
     <script>
        
-     var marks = [21,103,82,45,88]
+       function myFunction(){
 
-     function Ascending(){
-      marks.sort(function (a, b){
-      return a-b
+       var x = 20
+       var y = 30
 
-      })
-    
-     document.getElementById("result").innerHTML = marks
-    
-     }
+       var c = eval('x*y+20-10/x+y')
+      document.getElementById("result").innerHTML = c
 
-      function Descending(){
-      marks.sort(function (a, b){
-      return b-a
-
-      })
-    
-     document.getElementById("result").innerHTML = marks
-    
-     }
-
-     function codingal(a,b){
-      return a+b
-     }
-      console.log(codingal(20,30))
-    
+       }
 
     </script>
   </body>
