@@ -1,61 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Class in JavaScript</title>
+    <title></title>
   </head>
 
   <body>
-    
-    <button onclick="bookTrain()">Book Train Ticket</button>
-    <button onclick="cancelTrain()">Cancel Train Ticket</button>
-    <button onclick="bookFlight()">Book Flight Ticket</button>
+
+    <button onclick="sorting()">Sort</button>
+    <button onclick="reversed()">Reverse</button>
+
+    <h1 id="result"></h1>
 
     <script>
-      
-      class Railway {
-        submission(name, ticket) {
-          alert("✅ Railway ticket booked by" + name + "Ticket No:" + ticket);
-          console.log(`Railway: Ticket booked by ${name}, Ticket No: ${ticket}`);
-        }
+       
+     var fruits = ["Apple", "Mango", "Banana", "Grapes" , "Orange"]
 
-        cancellation(name, ticket) {
-          alert("❌ Railway ticket cancelled by" + name +" Ticket No:" + ticket);
-          console.log(`Railway: Ticket cancelled by ${name}, Ticket No: ${ticket}`);
-        }
+     function sorting(){
+      var sorted = fruits.sort()
+      document.getElementById("result").innerHTML = sorted
+     }
 
-      
-        static info() {
-          alert(" This system handles Railway and Flight bookings.");
-          console.log("System Info: Handling Railway and Flight bookings.");
-        }
-      }
+     function reversed(){
+      var reversed = fruits.reverse()
+      document.getElementById("result").innerHTML = reversed
+     }
 
-      
-      class Flight extends Railway {
-        fly(name, ticket) {
-          alert("✈️ Flight booked by"+ name + "Ticket No:" + ticket);
-          console.log("Flight: Ticket booked by" + name + "Ticket No:" + ticket);
-        }
-      }
-
-      
-      const henry = new Railway();
-      const owen = new Flight();
-
-      
-      function bookTrain() {
-        Railway.info()
-        henry.submission("Henry", "C22");
-      }
-
-      function cancelTrain() {
-        henry.cancellation("Henry", "B12");
-      }
-
-      function bookFlight() {
-        Railway.info(); 
-      owen.fly("Owen", "F45");
-      }
     </script>
   </body>
 </html>
+
