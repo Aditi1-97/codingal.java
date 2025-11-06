@@ -1,68 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Map and Arrange an Array</title>
+    <title>String Operations</title>
   </head>
 
   <body>
-    <h1>Map and Arrange an Array</h1>
-    <p>Array sorting and mapping in JavaScript</p>
-
-    <h2>1️⃣ Sorting Fruits</h2>
-    <button onclick="sorting()">Sort</button>
-    <button onclick="reversed()">Reverse</button>
-    <h3 id="fruitResult"></h3>
-
-    <h2>2️⃣ Sorting Numbers</h2>
-    <button onclick="Ascending()">Ascending</button>
-    <button onclick="Descending()">Descending</button>
-    <h3 id="numberResult"></h3>
-
-    <h2>3️⃣ Evaluate Expression</h2>
-    <button onclick="myFunction()">Evaluate</button>
-    <h3 id="evalResult"></h3>
+   
+    <h1 id="result"></h1>
+     <h1 id="result2"></h1>
+      <h1 id="result3"></h1>
 
     <script>
       
-      var fruits = ["Apple", "Mango", "Banana", "Grapes", "Dragon Fruit"];
+     var text = "I like to watch series"
+     
+     var position = text.search("series")
+     document.getElementById("result").innerHTML = position
 
-      function sorting() {
-        var sorted = fruits.sort();
-        document.getElementById("fruitResult").innerHTML = "Sorted: " + sorted;
-      }
+     var replace = text.replace( "like","hate")
+      document.getElementById("result2").innerHTML = replace
 
-      function reversed() {
-        var reversed = fruits.reverse();
-        document.getElementById("fruitResult").innerHTML = "Reversed: " + reversed;
-      }
+       var x = 10
+       var y = 20
 
+       var newX = String(x)
+       var newY = String(y)
+
+        document.getElementById("result3").innerHTML = typeof(newX)
       
-      var marks = [29, 2, 65, 125, 89];
-
-      function Ascending() {
-        marks.sort(function (a, b) {
-          return a - b;
-        });
-        document.getElementById("numberResult").innerHTML = "Ascending: " + marks;
-          
-      }
-
-      function Descending() {
-        marks.sort(function (a, b) {
-          return b - a;
-        });
-        document.getElementById("numberResult").innerHTML = "Descending: " + marks;
-        
-      }
-
-      
-      function myFunction() {
-        var x = 90;
-        var y = 120;
-        var c = eval('x/y*20-80/x + y');
-        document.getElementById("evalResult").innerHTML =  "Evaluated Result: " + c;
-          
-      }
     </script>
   </body>
 </html>
