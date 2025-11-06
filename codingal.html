@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>String Operations</title>
+    <title>Error Handling</title>
   </head>
 
   <body>
    
     <h1 id="result"></h1>
-     <h1 id="result2"></h1>
-      <h1 id="result3"></h1>
+     <p id="error" style="font-weight: bold; color: red;"></p>
 
     <script>
       
-     var text = "I like to watch series"
+    try{
+      codingal()
+    } catch (err) {
+      document.getElementById("error").innerHTML = err.message
+    }
+
+
+
      
-     var position = text.search("series")
-     document.getElementById("result").innerHTML = position
-
-     var replace = text.replace( "like","hate")
-      document.getElementById("result2").innerHTML = replace
-
-       var x = 10
-       var y = 20
-
-       var newX = String(x)
-       var newY = String(y)
-
-        document.getElementById("result3").innerHTML = typeof(newX)
-      
     </script>
   </body>
 </html>
