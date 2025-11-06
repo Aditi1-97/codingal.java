@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Error Handling</title>
+    <title>Arrow Function</title>
   </head>
 
   <body>
@@ -11,15 +11,13 @@
 
     <script>
       
-    try{
-      codingal()
-    } catch (err) {
+     try{
+      codingal = (x, y) => x+y
+      document.getElementById("result").innerHTML = codingal(10,100)
+     } catch(err) {
       document.getElementById("error").innerHTML = err.message
-    }
+     }
 
-
-
-     
     </script>
   </body>
 </html>
