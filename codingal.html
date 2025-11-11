@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Handle Errors in JS</title>
+    <title>JSON</title>
   </head>
 
   <body>
-    <h1>Handle Errors in JavaScript</h1>
-    <h3>Arrow Function, String Operations, and Error Handling</h3>
-
-    <h2 id="result1"></h2>
-    <h2 id="result2"></h2>
-    <h2 id="result3"></h2>
-    <p id="error" style="font-weight: bold; color: red;"></p>
-
+  
     <script>
-      try {
-        
-        let codingal = (x, y) => x + y;
-        document.getElementById("result1").innerHTML = "Sum using arrow function: " + codingal(10, 100);
-
-        var text = "I like to watch series";
-        var position = text.search("series");
-        var replaced = text.replace("like", "love");
-        document.getElementById("result2").innerHTML = "Word 'series' found at position: " + position;
-        document.getElementById("result3").innerHTML = "After replace: " + replaced;
-
-        
-        notDefinedFunction(); 
-      } catch (err) {
-        document.getElementById("error").innerHTML = "Error caught: " + err.message;
+      var user = {
+        name: "Virat Kohli",
+        email: "virat@gmail.com",
+        phone: "+91123123112",
+        password: "virat23",
       }
+
+      console.log(user)
+
+      var convert = JSON.stringify(user)
+      console.log(convert)
+
+      var revert = JSON.parse(convert)
+      console.log("revert", revert)
     </script>
   </body>
 </html>
