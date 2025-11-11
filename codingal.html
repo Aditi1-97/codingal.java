@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JSON</title>
+    <title>Callback Function</title>
   </head>
 
   <body>
   
     <script>
-      var user = {
-        name: "Virat Kohli",
-        email: "virat@gmail.com",
-        phone: "+91123123112",
-        password: "virat23",
+      
+     function codingal(dog){
+      dog()
+     }
+
+      function cat(){
+        console.log("Hey I'm a cat function")
       }
 
-      console.log(user)
+     codingal(cat)
 
-      var convert = JSON.stringify(user)
-      console.log(convert)
-
-      var revert = JSON.parse(convert)
-      console.log("revert", revert)
     </script>
   </body>
 </html>
