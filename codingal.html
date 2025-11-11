@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Callback Function</title>
+    <title>Promise</title>
   </head>
 
   <body>
   
     <script>
       
-     function codingal(dog){
-      dog()
-     }
+      let orderPizza = new Promise((resolve, reject) => {
 
-      function cat(){
-        console.log("Hey I'm a cat function")
-      }
+        let pizzaAvailable = true;
 
-     codingal(cat)
+        if(pizzaAvailable){
+          resolve("Pizza is ready!");
+        } else{
+          reject("sorry, pizza is not available!");
+        }
+      });
+
+      orderPizza
+      .then((message) => {
+        console.log("Success:", message);
+      })
+
+      .catch((error) => {
+        console.log("Error:", error);
+      });
+    
 
     </script>
   </body>
