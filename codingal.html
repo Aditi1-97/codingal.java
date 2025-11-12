@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Promise</title>
+    <title>Promise · Callback · JSON (combined)</title>
   </head>
 
   <body>
-  
+    <!-- Promise snippet -->
     <script>
-      
       let orderPizza = new Promise((resolve, reject) => {
 
         let pizzaAvailable = true;
@@ -27,11 +26,44 @@
       .catch((error) => {
         console.log("Error:", error);
       });
+   
+
+    <!-- Callback snippet -->
+   
+     function codingal(callback){
+      callback()
+     }
+
+      function cat(){
+        console.log("Hey I'm a callback function")
+      }
+
+     codingal(cat)
     
 
+    <!-- JSON snippet -->
+    
+      var user = {
+        name: "Emma Watson",
+        email: "emmaw@gmail.com",
+        phone: "+447480734898",
+        password: "emmas88",
+      }
+
+      console.log(user)
+
+      var convert = JSON.stringify(user)
+      console.log(convert)
+
+      var revert = JSON.parse(convert)
+      console.log("revert", revert)
     </script>
   </body>
 </html>
+
+
+ 
+
 
     
 
