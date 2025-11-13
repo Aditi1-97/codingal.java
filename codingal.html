@@ -1,68 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Promise · Callback · JSON (combined)</title>
-  </head>
+    <head>
+        <title>Simple Fom Validation</title>
+    </head>
 
-  <body>
-    <!-- Promise snippet -->
-    <script>
-      let orderPizza = new Promise((resolve, reject) => {
+    <body>
+        
+       <h2>Registration Form</h2>
 
-        let pizzaAvailable = true;
+       <form id="myForm">
 
-        if(pizzaAvailable){
-          resolve("Pizza is ready!");
-        } else{
-          reject("sorry, pizza is not available!");
-        }
-      });
+        <label>Name:</label>
+        <input type="text" id="name"><br><br>
 
-      orderPizza
-      .then((message) => {
-        console.log("Success:", message);
-      })
+        <label>Email:</label>
+         <input type="text" id="email"><br><br>
 
-      .catch((error) => {
-        console.log("Error:", error);
-      });
-   
+         <label>Password:</label>
+         <input type="text" id="password"><br><br>
 
-    <!-- Callback snippet -->
-   
-     function codingal(callback){
-      callback()
-     }
+         <button type="submit">Submit</button>
 
-      function cat(){
-        console.log("Hey I'm a callback function")
-      }
+       </form>
+           
+        <p id="error" style="color: red;"></p>
 
-     codingal(cat)
-    
+        <script src="script.js"></script>
 
-    <!-- JSON snippet -->
-    
-      var user = {
-        name: "Emma Watson",
-        email: "emmaw@gmail.com",
-        phone: "+447480734898",
-        password: "emmas88",
-      }
-
-      console.log(user)
-
-      var convert = JSON.stringify(user)
-      console.log(convert)
-
-      var revert = JSON.parse(convert)
-      console.log("revert", revert)
-    </script>
-  </body>
+        
+    </body>
 </html>
-
-
- 
 
 
     
